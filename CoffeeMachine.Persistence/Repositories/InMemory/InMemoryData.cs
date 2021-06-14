@@ -36,11 +36,6 @@ namespace CoffeeMachine.Persistence.Repositories.InMemory
             };
         }
 
-        public async Task<List<Inventory>> GetInventoryAsync()
-        {
-            return await Task.FromResult(_inventories);
-        }
-
         public async Task<Inventory> GetInventoryByTypeAsync(InventoryType inventoryType)
         {
             return await Task.FromResult(_inventories.Find(e => e.InventoryType == inventoryType));

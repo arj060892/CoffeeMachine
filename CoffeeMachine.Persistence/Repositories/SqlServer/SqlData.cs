@@ -17,11 +17,6 @@ namespace CoffeeMachine.Persistence.Repositories.SqlServer
             _dbContext = dbContext;
         }
 
-        public async Task<List<Inventory>> GetInventoryAsync()
-        {
-            return await _dbContext.Inventories.ToListAsync();
-        }
-
         public async Task<Inventory> GetInventoryByTypeAsync(InventoryType inventoryType)
         {
             return await _dbContext.Inventories.Where(e => e.InventoryType == inventoryType).FirstOrDefaultAsync();

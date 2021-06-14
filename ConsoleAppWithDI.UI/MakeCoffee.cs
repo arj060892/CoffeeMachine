@@ -28,7 +28,7 @@ namespace CoffeeMachineConsole.UI
                 try
                 {
                     Console.WriteLine(UIText.MenuOptions);
-                    DrinkType drinkType = (DrinkType)Convert.ToInt32(_consoleWrapper.ReadLine());
+                    DrinkType drinkType = (DrinkType)Convert.ToInt32(_consoleWrapper.ReadLine()); // cast user input to specific drink type
                     var userDrinkOption = _implementationFactory.Create(drinkType);
                     Console.WriteLine(await userDrinkOption.MakeDrinkAsync());
                 }
@@ -43,7 +43,7 @@ namespace CoffeeMachineConsole.UI
 
                 Console.WriteLine("\n*********************\nOrder Again? [Y/Off]\n*********************");
                 inputKey = _consoleWrapper.ReadLine();
-            } while (inputKey.ToLower() != "off");
+            } while (inputKey.ToLower() != "off"); // keep prompting user untill they type 'off'
         }
     }
 }
