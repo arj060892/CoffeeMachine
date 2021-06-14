@@ -2,7 +2,6 @@
 using CoffeeMachine.Domain.Entities;
 using CoffeeMachine.Domain.Types;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 

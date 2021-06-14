@@ -1,6 +1,5 @@
 ﻿using CoffeeMachine.Domain.Entities;
 using CoffeeMachine.Domain.Types;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CoffeeMachine.Application.Contracts.Persistence

@@ -14,6 +14,5 @@ namespace CoffeeMachine.Application.Contracts.ImplementationFactory
         /// <param name="drinkType">Type of Drink selected by user. typeof DrinkType</param>
         /// <returns>Concrete Class for IDrink Interface</returns>
         IDrink Create(DrinkType drinkType);
-        
     }
 }
