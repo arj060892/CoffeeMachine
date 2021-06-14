@@ -1,6 +1,5 @@
 ﻿using CoffeeMachine.Application.Contracts.Persistence;
 using CoffeeMachine.Application.Contracts.Service;
-using CoffeeMachine.Domain.Entities;
 using CoffeeMachine.Domain.Types;
 using CoffeeMachine.Service.Base;
 using System.Threading.Tasks;

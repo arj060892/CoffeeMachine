@@ -1,5 +1,4 @@
-﻿using System;
-using CoffeeMachine.Service;
+﻿using CoffeeMachine.Service;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CoffeeMachineConsole.UI

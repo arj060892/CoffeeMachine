@@ -1,5 +1,4 @@
-﻿using CoffeeMachine.Application.Contracts.ApplicationHelper;
-using CoffeeMachine.Application.Contracts.Persistence;
+﻿using CoffeeMachine.Application.Contracts.Persistence;
 using CoffeeMachine.Domain.Entities;
 using CoffeeMachine.Domain.Types;
 using CoffeeMachine.Service;

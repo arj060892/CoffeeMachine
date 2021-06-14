@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CoffeeMachine.Console.Constanst
+﻿namespace CoffeeMachine.Console.Constanst
 {
     public static class UIText
     {
@@ -12,11 +6,11 @@ namespace CoffeeMachine.Console.Constanst
                     ***********************************************
                     *********Welcome to Coffee Shop****************
                     ***********************************************";
+
         public static string MenuOptions = @"
-=> Please Select your preference 
+=> Please Select your preference
     1. Coffee
     2. Cappuccino
     3. Latte";
     }
-
 }

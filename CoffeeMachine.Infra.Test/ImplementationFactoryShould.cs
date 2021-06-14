@@ -4,11 +4,7 @@ using CoffeeMachine.Domain.Types;
 using CoffeeMachine.Service;
 using CoffeeMachine.Service.Drinks.Factory;
 using Moq;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace CoffeeMachine.Infra.Test
@@ -20,19 +16,19 @@ namespace CoffeeMachine.Infra.Test
 
         public ImplementationFactoryShould()
         {
-             _mockIEnum = new Mock<IEnumerable<IDrink>>();
-             _mockList = new List<IDrink>()
+            _mockIEnum = new Mock<IEnumerable<IDrink>>();
+            _mockList = new List<IDrink>()
             {
                 new Coffee(null, null),
                 new Cappuccino(null,null),
                 new Latte(null)
             };
             _mockIEnum.Setup(x => x.GetEnumerator()).Returns(_mockList.GetEnumerator());
-
         }
+
         [Fact]
         public void RetrunTypeOfCoffee()
-        {            
+        {
             var drinkType = DrinkType.Coffee;
             var sut = new ImplementationFactory(_mockIEnum.Object);
             Assert.IsType<Coffee>(sut.Create(drinkType));
@@ -64,7 +60,7 @@ namespace CoffeeMachine.Infra.Test
             };
             _mockIEnum.Setup(x => x.GetEnumerator()).Returns(_mockList.GetEnumerator());
             var sut = new ImplementationFactory(_mockIEnum.Object);
-            Assert.Throws<InvalidDrinkException>(()=>sut.Create(drinkType));
+            Assert.Throws<InvalidDrinkException>(() => sut.Create(drinkType));
         }
     }
 }

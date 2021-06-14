@@ -18,7 +18,7 @@ namespace CoffeeMachine.Persistence.Repositories.SqlServer
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CoffeeMachineDbContext).Assembly);
 
             //seed data, added through migrations
-            
+
             modelBuilder.Entity<Inventory>().HasData(new Inventory
             {
                 InventoryId = Guid.Parse("{b191c99e-0497-4c1d-810e-100be869c5f8}"),
@@ -36,12 +36,12 @@ namespace CoffeeMachine.Persistence.Repositories.SqlServer
             });
 
             modelBuilder.Entity<Inventory>().HasData(new Inventory
-             {
-                 InventoryId = Guid.Parse("{a63acaf6-cc81-48fe-bf1b-e05a2ddb656b}"),
-                 InventoryType = InventoryType.Sugar,
-                 InitalUnit = 25,
-                 UnitRemaining = 25
-             });
+            {
+                InventoryId = Guid.Parse("{a63acaf6-cc81-48fe-bf1b-e05a2ddb656b}"),
+                InventoryType = InventoryType.Sugar,
+                InitalUnit = 25,
+                UnitRemaining = 25
+            });
         }
     }
 }
