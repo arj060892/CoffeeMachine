@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMachine.Application",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMachine.Persistence", "CoffeeMachine.Persistence\CoffeeMachine.Persistence.csproj", "{114B3119-A7FB-4475-A0E3-6EAC1903E3B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMachine.Console", "ConsoleAppWithDI.UI\CoffeeMachine.Console.csproj", "{EC39F58C-BAAC-4C06-A0F1-73316AC60F1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMachine.Console", "CoffeeMachine.UI\CoffeeMachine.Console.csproj", "{EC39F58C-BAAC-4C06-A0F1-73316AC60F1B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMachine.Service", "CoffeeMachine.Service\CoffeeMachine.Service.csproj", "{9846E0A9-AFDC-43F5-B7F2-5C6E42F684DD}"
 EndProject
