@@ -141,7 +141,7 @@ namespace CoffeeMachine.Infra.Test
                 .Returns(Task.FromResult(beans));
             _mockRepo.Setup(e => e.GetInventoryByTypeAsync(InventoryType.Milk))
                 .Returns(Task.FromResult(milk));
-            _mockRepo.Setup(e => e.MakeDrinkAsync(_sut.DrinkProp))
+            _mockRepo.Setup(e => e.MakeDrinkAsync(_sut.drinkToMake))
                 .Returns(Task.FromResult(_successMessage));
         }
 
@@ -150,7 +150,7 @@ namespace CoffeeMachine.Infra.Test
             var beans = new Inventory { UnitRemaining = 6, InventoryType = InventoryType.Beans };
             _mockRepo.Setup(e => e.GetInventoryByTypeAsync(InventoryType.Beans))
                 .Returns(Task.FromResult(beans));
-            _mockRepo.Setup(e => e.MakeDrinkAsync(_sut.DrinkProp))
+            _mockRepo.Setup(e => e.MakeDrinkAsync(_sut.drinkToMake))
                 .Returns(Task.FromResult(_successMessage));
         }
 

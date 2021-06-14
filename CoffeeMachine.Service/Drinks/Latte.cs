@@ -1,6 +1,7 @@
 ﻿using CoffeeMachine.Application.Contracts.Persistence;
 using CoffeeMachine.Application.Contracts.Service;
 using CoffeeMachine.Domain.Entities;
+using CoffeeMachine.Domain.Types;
 using CoffeeMachine.Service.Base;
 using System.Threading.Tasks;
 
@@ -8,32 +9,22 @@ namespace CoffeeMachine.Service
 {
     public class Latte : MachineAbstract, IDrink
     {
-        private readonly Drink _drinkProp;
         public Latte(IMachineRepo machineRepo) : base(machineRepo)
         {
-            _drinkProp = new()
+            drinkToMake = new()
             {
                 BeanCount = 3,
                 SugarCount = 0,
-                DrinkType = Domain.Types.DrinkType.Latte,
+                DrinkType = DrinkType.Latte,
                 MilkCount = 2
             };
         }
 
-        public Drink DrinkProp
-        {
-            get => _drinkProp;
-        }
+        public DrinkType DrinkType => DrinkType.Latte;
 
         public async Task<string> MakeDrinkAsync()
         {
-            drinkToMake = DrinkProp;
-            if (await IsBeanAvailable() && await IsMilkAvailable())
-            {
-                return await DispatchDrink();
-
-            }
-            return string.Join("\n", warningMessage);
+            return await IsBeanAvailable() && await IsMilkAvailable() ? await DispatchDrink() : warningMessage;
         }
     }
 }

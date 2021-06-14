@@ -97,7 +97,7 @@ namespace CoffeeMachine.Infra.Test
                 .Returns(Task.FromResult(beans));
             _mockRepo.Setup(e => e.GetInventoryByTypeAsync(InventoryType.Milk))
                 .Returns(Task.FromResult(milk));
-            _mockRepo.Setup(e => e.MakeDrinkAsync(_sut.DrinkProp))
+            _mockRepo.Setup(e => e.MakeDrinkAsync(_sut.drinkToMake))
     .Returns(Task.FromResult(_successMessage));
         }
 

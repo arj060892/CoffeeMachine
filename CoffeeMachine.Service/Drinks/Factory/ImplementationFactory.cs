@@ -18,7 +18,7 @@ namespace CoffeeMachine.Service.Drinks.Factory
 
         public IDrink Create(DrinkType drinkType)
         {
-            var drinkInstance = _drinks.ToList().Find(e => e.DrinkProp.DrinkType == drinkType);
+            var drinkInstance = _drinks.ToList().Find(e => e.DrinkType == drinkType);
             if (drinkInstance is null)
             {
                 throw new InvalidDrinkException("\n==========================\nInvalid Selection\n===============================");

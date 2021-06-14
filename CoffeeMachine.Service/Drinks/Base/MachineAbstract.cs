@@ -1,8 +1,6 @@
 ﻿using CoffeeMachine.Application.Contracts.Persistence;
-using CoffeeMachine.Application.Contracts.Service;
 using CoffeeMachine.Domain.Entities;
 using CoffeeMachine.Domain.Types;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CoffeeMachine.Service.Base
@@ -56,6 +54,5 @@ namespace CoffeeMachine.Service.Base
         {
             return await _machineRepo.GetInventoryShortageAsync(InventoryType.Beans, _beanThreshold);
         }
-
     }
 }
