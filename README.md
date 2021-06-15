@@ -18,6 +18,6 @@ To run the application use [Visual studio 2019](https://visualstudio.microsoft.c
 
 #Project Architecture
 The application follows **clean architecture**
-Following the buidling blocks of projects:
-- Core
-- Test
+Following are the buidling blocks of projects:
+- Core : have all the business logic and application interaction
+- Test : Covers the related test cases for the business logic
